@@ -10,7 +10,7 @@ html {
 :root {
   font-family: "Calibri", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   color: black;
 
   /** Variables */
@@ -40,22 +40,34 @@ a {
   margin: auto;
   border: 1px solid transparent;
   display: flex;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .main-btn {
-  padding: 10px 16px;
+  padding: 10px 20px;
   border-radius: 45px;
   background-color: #4b9618;
   font-weight: 700;
   color: #fff !important;
 }
 
+.btn-centered {
+  margin: auto;
+  position: relative;
+  top: -200px;
+}
+
 h1 {
   font-family: "Merienda One", cursive;
   color: #4b9618;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 300;
+}
+
+h2 {
+  font-family: "Merienda One", cursive;
+  color: black;
+  font-weight: 100;
 }
 
 /* header */
@@ -113,8 +125,22 @@ li {
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
 
+/* NEw tea section */
+
 .new-tea__left {
+  flex: 1 1 50%;
   margin: 1rem;
+}
+
+.new-tea__left p {
+  margin: 0 0 3rem 0;
+}
+.new-tea__right {
+  flex: 1 1 50%;
+}
+
+.new-tea__right-image {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* OUR FLAVOURS section */
@@ -125,11 +151,13 @@ li {
 .our-flavours__heading {
   text-align: center;
   background-color: #fff;
+  position: relative;
+  top: 100px;
+  z-index: 2;
 }
 
 .our-flavours__tea {
   flex-grow: 1;
-  margin-right: 1rem;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
@@ -137,11 +165,27 @@ li {
 
 .our-flavours__tea * {
   align-self: center;
+  text-align: center;
 }
+
 .our-flavours__tea img {
+  z-index: 2;
   height: 50%;
   width: 50%;
 }
+.oval {
+  position: absolute;
+  z-index: 0;
+}
+
 .oval-180 {
   transform: rotate(180deg);
+  position: relative;
+  top: 5px;
+}
+
+/* Section Tea topics */
+
+.tea-topics__container {
+  display:flex ;
 }
