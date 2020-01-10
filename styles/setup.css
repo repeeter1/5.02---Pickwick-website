@@ -58,16 +58,17 @@ a {
 }
 
 h1 {
-  font-family: "Merienda One", cursive;
+  font-family: "Merienda", sans-serif;
   color: #4b9618;
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 h2 {
-  font-family: "Merienda One", cursive;
+  font-family: "Merienda", sans-serif;
   color: black;
   font-weight: 100;
+  font-size: 1.1rem;
 }
 
 /* header */
@@ -76,6 +77,7 @@ header {
   position: sticky;
   top: 0;
   background-color: #fff;
+  z-index: 3;
 }
 
 .navbar__container {
@@ -181,11 +183,38 @@ li {
 .oval-180 {
   transform: rotate(180deg);
   position: relative;
-  top: 5px;
+  top: 7px;
 }
 
 /* Section Tea topics */
 
 .tea-topics__container {
-  display:flex ;
+  display: flex;
+}
+
+/* Section Inspiration */
+
+.inspiration__heading {
+  margin-top: 5rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.inspiration__article {
+  flex: 1 1 30%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 1.9rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inspiration__article img {
+  width: 100%;
+}
+
+.inspiration__article-text-wrap {
+  display: flex;
+  flex-direction: column;
 }
