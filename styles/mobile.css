@@ -1,0 +1,23 @@
+body {
+  background: lightblue;
+}
+
+.navbar__container {
+  flex-wrap: wrap;
+}
+
+.jumbo {
+  min-height: 50vh;
+}
+
+.jumbo__image-welcome-title {
+  width: 90%;
+  margin-left: 0;
+}
+
+.jumbo__welcome-text {
+  margin-left: 1rem;
+}
+
+.inspiration__article {
+

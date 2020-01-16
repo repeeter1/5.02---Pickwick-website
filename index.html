@@ -16,6 +16,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/setup.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./styles/mobile.css"
+    />
   </head>
   <body>
     <header>
@@ -207,12 +212,223 @@
     </section>
 
     <section class="newsletter">
-      <div class="container">
-        <!-- hier komt alles center aligned -->
+      <div class="container newsletter__container">
+        <h1>Pickwick Theeblaadje</h1>
+        <p>
+          Onze nieuwsbrief loopt over van de lekkere recepten, aanbiedingen,
+          nieuwe producten en leuke evenementen van Pickwick.
+        </p>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="title"> Aanhef</label>
+            <div class="radio">
+              <label>
+                <input
+                  checked="checked"
+                  id="Title"
+                  name="Title"
+                  type="radio"
+                  value="Dhr."
+                />
+                Dhr.
+                <span></span>
+              </label>
+              <label>
+                <input id="Title" name="Title" type="radio" value="Mevr." />
+                Mevr.
+                <span></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xs-12 col-sm-3">
+                <label for="firstname"> Voornaam</label>
+                <input
+                  class="form-control"
+                  data-val-required="Ongeldige voornaam"
+                  id="FirstName"
+                  name="FirstName"
+                  type="text"
+                  value=""
+                />
+                <div class="help-block with-errors">
+                  <span
+                    class="field-validation-valid"
+                    data-valmsg-for="FirstName"
+                    data-valmsg-replace="true"
+                  ></span>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                <label for="lastname"> Achternaam</label>
+                <input
+                  class="form-control"
+                  data-val-required="Ongeldige achternaam"
+                  id="LastName"
+                  name="LastName"
+                  type="text"
+                  value=""
+                />
+                <div class="help-block with-errors">
+                  <span
+                    class="field-validation-valid"
+                    data-valmsg-for="LastName"
+                    data-valmsg-replace="true"
+                  ></span>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-5">
+                <label for="emailaddress"> E-mailadres</label>
+                <input
+                  class="form-control"
+                  data-val-required="Ongeldig e-mail adres"
+                  id="Email"
+                  name="Email"
+                  type="email"
+                  value=""
+                />
+                <div class="help-block with-errors">
+                  <span
+                    class="field-validation-valid"
+                    data-valmsg-for="Email"
+                    data-valmsg-replace="true"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input
+                  data-val="true"
+                  data-val-required="Ongeldige leeftijd"
+                  id="AgeConfirm"
+                  name="AgeConfirm"
+                  type="checkbox"
+                  value="true"
+                /><input name="AgeConfirm" type="hidden" value="false" />
+
+                <p>
+                  Ja, ik ben ouder dan 16 jaar
+                </p>
+                <span></span>
+              </label>
+              <div class="help-block with-errors">
+                <span
+                  class="field-validation-valid"
+                  data-valmsg-for="AgeConfirm"
+                  data-valmsg-replace="true"
+                ></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input
+                  data-val="true"
+                  data-val-required="Ongeldige selectie"
+                  id="Agreement"
+                  name="Agreement"
+                  type="checkbox"
+                  value="true"
+                /><input name="Agreement" type="hidden" value="false" />
+
+                <p>
+                  Ja, ik ontvang graag gepersonaliseerde e-mails over Pickwick
+                  producten, exclusieve aanbiedingen, promoties en service op
+                  basis van mijn aankopen, product registraties en activiteiten
+                  op pickwick.nl. Ik begrijp dat ik mij op ieder moment kan
+                  <a
+                    href="/link/b4c208457a5a46d1b9be183c8ee6e445.aspx?id=fuN2Q7NHyglWc4MIXnFJktnTjP6g/Y6rQyRtlpX5dCHstgO6ggknHYuwAagCZhDM&amp;s=caef3cd69352643c2d88ea35d3d6aadd4790b7d31548675e27583ec1af716d84"
+                    >uitschrijven</a
+                  >. Raadpleeg onze
+                  <a href="/link/36d61ab1f4a643eb8af70ebe0a3ae16d.aspx"
+                    >privacy policy&nbsp;</a
+                  >voor meer informatie.
+                </p>
+                <span></span>
+              </label>
+              <div class="help-block with-errors">
+                <span
+                  class="field-validation-valid"
+                  data-valmsg-for="Agreement"
+                  data-valmsg-replace="true"
+                ></span>
+              </div>
+            </div>
+          </div>
+          <input class="main-btn" type="submit" value="Schrijf je nu in" />
+        </form>
       </div>
     </section>
 
     <!-- footer -->
-    <footer></footer>
+    <footer>
+      <div class="Footer__container">
+        <div class="socials">
+          <h3>Volg ons op</h3>
+          <img src="./images/pw-social-facebook2.png" alt="" />
+          <img src="./images/pw-social-instagram2.png" alt="" />
+          <img src="./images/pw-social-youtube2.png" alt="" />
+        </div>
+        <div class="sitemap1">
+          <h3>Assortiment</h3>
+          <ul>
+            <li><a href="">Zwarte thee</a></li>
+            <li><a href="">Groene thee</a></li>
+            <li><a href="">Witte thee</a></li>
+            <li><a href="">Spices</a></li>
+            <li><a href="">Fruit thee</a></li>
+            <li><a href="">rooibos</a></li>
+            <li><a href="">Kruiden</a></li>
+            <li><a href="">Joy of tea</a></li>
+            <li><a href="">Even..</a></li>
+          </ul>
+        </div>
+        <div class="sitemap2">
+          <h3>Over Pickwick</h3>
+          <ul>
+            <li><a href="">Nieuws</a></li>
+            <li><a href="">Tea Topics</a></li>
+            <li><a href="">Spaarcollectie</a></li>
+            <li><a href="">Theerecepten</a></li>
+            <li><a href="">Nieuwsbrief</a></li>
+            <li><a href="">Over onze thee</a></li>
+            <li><a href="">Ethical Tea Partnership</a></li>
+            <li><a href="">Geschiedenis</a></li>
+          </ul>
+        </div>
+        <div class="sitemap3">
+          <h3>Klantenservice</h3>
+          <ul>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Veelgestelde vragen</a></li>
+            <li><a href="">Thee op het werk</a></li>
+            <li><a href="">Thee in de horeca</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <img
+            src="./images/pickwick-logo2x2.png"
+            alt=""
+            class="footer__logo"
+          />
+        </div>
+        <div class="sitemap4">
+          <span>©2020 Pickwick </span>
+          <a href="">Privacy</a>
+          <a href="">Cookies</a>
+          <a href="">Bedrijfsinformatie</a>
+          <a href="">Gebruikersvoorwaarden</a>
+          <a href="">Jacobs Douwe Egberts</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

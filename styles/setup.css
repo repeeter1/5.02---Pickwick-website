@@ -44,6 +44,7 @@ a {
 }
 
 .main-btn {
+  border: 0;
   padding: 10px 20px;
   border-radius: 45px;
   background-color: #4b9618;
@@ -71,6 +72,13 @@ h2 {
   font-size: 1.1rem;
 }
 
+h3 {
+  font-family: "Merienda", sans-serif;
+  color: black;
+  font-weight: 100;
+  font-size: 1rm;
+}
+
 /* header */
 
 header {
@@ -94,7 +102,7 @@ header {
   color: black;
 }
 
-li {
+.navbar__container li {
   font-family: "quicksand";
   list-style: none;
   padding: 0.5rem 1.7rem;
@@ -142,6 +150,7 @@ li {
 }
 
 .new-tea__right-image {
+  width: 100%;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -201,13 +210,18 @@ li {
 }
 
 .inspiration__article {
-  flex: 1 1 30%;
+  flex: 1;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 0.8rem 1.9rem;
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+.inspiration__article:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.025);
+  transition: all 0.35s ease;
 }
 
 .inspiration__article img {
@@ -215,6 +229,78 @@ li {
 }
 
 .inspiration__article-text-wrap {
+}
+
+/* Newsletter section */
+
+.newsletter {
+  background: url("../images/pickwickgoedemiddag.jpg") no-repeat center
+    center/cover;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.newsletter__container {
   display: flex;
   flex-direction: column;
+  border: 1px solid #000;
+}
+
+/* form */
+
+input[type="text"],
+input[type="Email"] {
+  opacity: 0.5;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 2rem 0.9rem 2rem;
+  margin: 1rem;
+}
+
+.Footer__container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  margin-top: 2rem;
+  grid-gap: 1rem;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: minmax(200px, auto);
+  grid-template-areas:
+    ". . . . . socials"
+    "sitemap1 sitemap2 sitemap3 . . logo"
+    "sitemap4 sitemap4 sitemap4 sitemap4 sitemap4 sitemap4";
+}
+
+.socials {
+  grid-area: socials;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+li {
+  font-family: "quicksand";
+  list-style: none;
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+
+.sitemap1 {
+  grid-area: sitemap1;
+}
+
+.sitemap2 {
+  grid-area: sitemap2;
+}
+
+.sitemap3 {
+  grid-area: sitemap3;
+}
+
+.sitemap4 {
+  grid-area: sitemap4;
+  display: flex;
+  justify-content: space-between;
 }
